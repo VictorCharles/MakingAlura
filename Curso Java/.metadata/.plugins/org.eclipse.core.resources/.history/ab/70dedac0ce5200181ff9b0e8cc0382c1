@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Area {
+
+	public static void main(String[] args) {
+	 FiguraGeometrica F1 = new FiguraGeometrica();
+	 Scanner s=new Scanner (System.in);
+	 System.out.println("Digita a altura");
+	 F1.altura = s.nextInt();
+	 F1.largura = s.nextInt();
+	 int op=0;
+		//Defina valor de op
+		do{
+			
+			System.out.println("1 - Retangulo \n 2 - quadrado \n 3- Triangulo");
+			//Inicie escrevendo o que está entre paranteses para o comando
+			op = s.nextInt();
+			//Leia o valor de OP
+			if (op==1){
+				//Inicie o metodo CalcularAreaRetangulo
+				F1.CalcularAreaRetangulo();
+				F1.ImprimirDadosNaTela();
+				//escreva
+			}// Fim do if quando 'op' = a 1
+			if (op==2){
+				F1.CalcularAreaQuadrado();
+				F1.ImprimirDadosNaTela();
+			} //Fim do if quando op for = a 2
+			if (op==3){
+				F1.CalcularAreaTriangulo();
+				F1.ImprimirDadosNaTela();
+			} //Fim do if quando op for = a 3
+		} while (op==0);
+	}
+
+}

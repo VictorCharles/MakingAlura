@@ -1,0 +1,79 @@
+/*Entendendo herança
+
++-----------------------------+
+| Carro 					  |
++-----------------------------+
+| - vel:double  			  |
+| - nome:String				  |
+| - aceleracao:double         |
++-----------------------------+
+| +Acelerar():void            |
++-----------------------------+
+		|
+		|	OBS: CarroTurbo
+		|	herda todos os
+		|	atributos e metodos
+		|	da classe Carro
+		V
++-----------------------------+
+| CarroTurbo				  |
++-----------------------------+
+| - turbo:double			  |
++-----------------------------+
+| + acelerar():void			  |
++-----------------------------+
+
+*Tanto na classe Carro, como na classe CarroTurbo, temos o metodo acelerar().
+
+Exemplo:
+*/
+public class Carro {
+
+	// Atributos:
+	private double vel;
+	private String nome;
+	private double aceleracao;
+
+	// Construtor:
+	public Carro(double vel, String nome, double aceleracao) {
+		this.setVel(vel);
+		this.setNome(nome);
+		this.setAceleracao(aceleracao);
+	}// fim do construtor
+
+	// Setters:
+	public void setVel(double vel) {
+		if (vel >= 0) {
+			this.vel = vel;
+		}
+	}
+
+	public void setNome(String nome) {
+		if (nome != null) {
+			this.nome = nome;
+		}
+	}
+
+	public void setAceleracao(double aceleracao) {
+		if (aceleracao >= 0) {
+			this.aceleracao = aceleracao;
+		}
+	}
+
+	// Getters:
+	public double getVel() {
+		return this.vel;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
+	public double getAceleracao() {
+		return this.aceleracao;
+	}
+
+	public void acelerar() {
+		this.vel *= this.aceleracao;
+	}// Fim do metodo acelerar
+}// fim da classe Carro

@@ -1,0 +1,25 @@
+
+public class CarroTurbo extends Carro {
+	private double turbo;
+
+	// Construtores
+	public CarroTurbo(double vel, String nome, double aceleracao, double turbo) {
+		super(vel, nome, aceleracao);
+		this.setTurbo(turbo);
+	}
+
+	public void setTurbo(double turbo) {
+		if (turbo > 0) {
+			this.turbo = turbo;
+		}
+	} // fim do set turbo
+
+	public double getTurbo() {
+		return this.turbo;
+	}
+	
+	public void acelerar() {
+		super.setVel(getVel() * getAceleracao() * getTurbo());
+	}
+
+}
