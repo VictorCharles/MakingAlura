@@ -1,36 +1,45 @@
 body {
-    background: radial-gradient(peachpuff, lightcoral);
-    background-size: auto 100vw;
-    font-family: 'Lucida Sans';
+	background: repeating-radial-gradient(peachpuff, lightcoral);
+	background-size: auto 100vw;
+	font-family: 'Lucida Sans';
 }
-
 .menu {
-    background-color: white;
+	background-color: white;
 }
-
 .menu ul {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
+	font-family: monospace;
+	font-size: 18px;
 }
-
 .menu li {
-    list-style: none;   
+	list-style: none;
 }
-
 a {
-    color: tomato;
-    text-decoration: none;
+	color: tomato;
+	text-decoration: none;
 }
-
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
-
 .site-subtitle, .site-title {
-    text-align: center;
-    color: teal;
+	text-align: center;
+	color: teal;
+}
+.site-subtitle {
+	font-style: italic;
+}
+.Desafio, .original {
+	width: 50vw;
+	height: auto;
+	box-sizing: content-box;
+}
+.Desafio{
+	filter: contrast(100);
+	/*Fiz diferentão, só pra contrastar :v*/
 }
 
-.site-subtitle {
-    font-style: italic;
+.tentativa1 {
+	display: flex;
+	justify-content: space-around;
 }
