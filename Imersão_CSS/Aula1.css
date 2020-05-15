@@ -5,12 +5,11 @@
 }
 body {
 	background: repeating-radial-gradient(peachpuff, lightcoral);
-	background-size: auto 100vw ;
+	background-size: auto 100vw;
 	font-family: 'Lucida Sans';
 }
 header {
-	height: 100vh;
-	width: 100vw;
+	height: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -31,11 +30,7 @@ header {
 	list-style: none;
 }
 .menu a{
-	display: block;
-	padding: 10px 20px;
-}
-.menu a:hover{
-	background-color: antiquewhite;
+	
 }
 a {
 	color: tomato;
@@ -52,4 +47,6 @@ a:hover {
 .site-subtitle {
 	font-style: italic;
 }
-
+.Desafio {
+	filter: contrast(10);
+} 
