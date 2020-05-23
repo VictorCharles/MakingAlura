@@ -3,11 +3,33 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
-	background: repeating-radial-gradient(peachpuff, lightcoral);
-	background-size: auto 100vw ;
-	font-family: 'Lucida Sans';
+	background-color: #808080;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
 }
+
+
+@media (min-width: 800px) {
+	body {
+		font-size: 18px;
+	}
+}
+@media (min-width: 360px) {
+	body {
+		font-size: 14px;
+	}
+	.grid {
+		grid-template-columns: repeat(2, 100px);
+	}
+	.contato .icons {
+		padding-left: 0;
+		text-align: center;
+	} 
+}
+
+
 header {
 	height: 100vh;
 	width: 100vw;
@@ -15,41 +37,87 @@ header {
 	justify-content: center;
 	align-items: center;
 }
+
 .menu {
-	background-color: white;
+	background-color: floralwhite;
+	border-bottom: whitesmoke;
 	position: fixed;
 	width: 100vw;
 	top: 0px;
 }
+
 .menu ul {
 	display: flex;
 	justify-content: space-around;
-	font-family: monospace;
 	font-size: 18px;
 }
+
 .menu li {
 	list-style: none;
 }
-.menu a{
+
+.menu a {
 	display: block;
 	padding: 10px 20px;
+	transition: background-color 2s, color 2s;
 }
-.menu a:hover{
-	background-color: antiquewhite;
+.menu a:active, .menu a:hover {
+	background-color: blueviolet;
+	color: white;
 }
+
+
 a {
 	color: tomato;
 	text-decoration: none;
 }
+
 a:hover {
 	text-decoration: underline;
 }
+
 .site-subtitle, .site-title {
 	text-align: center;
 	color: floralwhite;
-	text-shadow: 1px 3px 0px salmon;
+	text-shadow: 1px 3px 0px black;
 }
+
+.site-title {
+	font-size: 5em;
+	font-family: 'Mystery Quest', cursive;
+}
+
 .site-subtitle {
 	font-style: italic;
+	line-height: 2.5em;
+	font-size: 2.5em;
+	font-family: 'Caveat', cursive;
 }
+.grid {
+	display:grid;
+	gap: 2em;
+	grid-template-columns: repeat(2,100px);
+}
+
+.contato, .projetos{
+	padding: 4em;
+	min-height: 100vh;
+}
+
+.contato a{ 
+	color: whitesmoke;
+	font-size: 6em;	
+	transition: text-shadow 2s, font-size 1s;
+}
+.contato a:active{
+	text-shadow: mediumslateblue;
+}
+.contato a:hover{
+	text-decoration: none;
+	text-shadow: 0px 0px 10px white;
+	font-size: 8em ;
+}
+.contato .icons {
+	padding-left:2em;
+} 
 
